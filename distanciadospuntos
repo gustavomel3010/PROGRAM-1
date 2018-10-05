@@ -1,0 +1,23 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+void main()
+{
+    float x1, x2, y1, y2, d, A, B;
+    cout<<"ESte programa sirve para calcular la distancia que existe entre dos puntos dados";
+	cout<<"Por favor ingrese las coordenadas del primer punto: ";
+	cin>>x1;
+    cin>>y1;
+	cout<< "Por favor ingrese las coordenadas del segundo punto: ";
+	cin>>x2>>y2;
+    A=pow(x2-x1,2);
+    B=pow(y2-y1,2);
+    d=sqrt(A+B);
+    cout<<d;
+
+
+    getch();
+}
