@@ -1,0 +1,43 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+void promedio (int A[], int P[], int tam);
+void ingresar (int A[], int tam);
+void mostrar (int P[], int tam);
+void main ()
+{
+	int tam, A[100], P[100];
+	cout << "Ingrese el tamaño del vector"<<endl;
+	cin >> tam;
+	cout << "Ingrese el vector A";
+	ingresar (A, tam);
+	promedio (A,P,tam);
+	cout << "El vector promedio es: ";
+	mostrar (P,tam);
+	getch();
+}
+
+void promedio (int A[], int P[], int tam)
+{
+	int k=0;
+	for (int i=0; i<tam-2;i++)
+	{
+		P[k]=(A[i]+A[i+1]+A[i+2])/3;
+		k++;
+	}
+}
+
+void ingresar (int A[], int tam)
+{
+	for (int i=0; i<tam;i++)
+		cin >> A[i];
+}
+
+
+void mostrar (int P[], int tam)
+{
+	for (int i=0;i<tam-2;i++)
+		cout << P[i]<< endl;
+}
