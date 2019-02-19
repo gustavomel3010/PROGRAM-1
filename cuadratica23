@@ -1,0 +1,43 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void cuadratica (float a,float  b,float c,float d,float &x1,float &x2)
+
+	void main()
+{
+	float a,b,c,x1,x2,d;
+
+	do { cout<< "ingrese a: "<<endl;
+		 cin>>a;
+	}
+	while (a<0);
+
+	cout<< "ingrese b: "<<endl;
+	cin>>b;
+
+	cout<< "ingrese c: "<<endl;
+	cin>>c;
+
+	d=b*b-4*a*c;
+
+	if (d<0)
+	{
+		cout<< "no hay solucion";
+	}
+	else {
+		cuadratica(a,b,c,d,x1,x2);
+		cout<<"x1: "<<x1<<endl;
+		cout<<"x2: "<<x2<<endl;
+	}
+getch();
+}
+void cuadratica (float a,float  b,float c,float d,float &x1,float &x2)
+{
+	x1=(-b+sqrt(d)/2*a);
+	x2=(-b-sqrt(d)/2*a);
+
+}
+	
